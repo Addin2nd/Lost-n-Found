@@ -1,0 +1,45 @@
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: calc(100vh-8em);
+    padding: 4em;
+    color: rgba(255,255,255,0.75);
+    background-color: rgb(25,25,25);
+}
+
+.garis {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgb(25,25,25);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.animasi-ketikan {
+    animation: ketikan 4s steps(20) is 1 normal both,
+    kedip 500ms steps(20) infinite normal;
+}
+
+@keyframes ketikan{
+    from{
+        width: 0;
+    } to{
+        width: 9em;
+    }
+}
+
+@keyframes kedip{
+    from{
+        border-right-color: rgb(25,25,25);
+    }to{
+        border-right-color: transparent;
+    }
+}
